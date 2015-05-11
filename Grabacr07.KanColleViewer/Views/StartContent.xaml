@@ -145,7 +145,7 @@
                     </TabControl.Resources>
                     <TabItem DataContext="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type views:StartContent}}, Path=DataContext}">
                         <TabItem.Header>
-							<TextBlock Text="정보"
+							<TextBlock Text="Information"
 										   Foreground="{Binding RelativeSource={RelativeSource AncestorType={x:Type TabItem}}, Path=Foreground}"
 										   Margin="12,0"
 										   FontSize="14" />
@@ -233,7 +233,11 @@
 									 FontSize="10" />
 								<Run Text=":" />
 								<metro2:HyperlinkEx Uri="https://twitter.com/southrop113">
-									<Run Text="@southrop113" />
+									<Run Text="@southrop113" /> <LineBreak/>
+                                        
+								</metro2:HyperlinkEx>
+								<metro2:HyperlinkEx Uri="https://github.com/gensuihime/KanColleViewer">
+									<Run Text="Gensuihime" />
 								</metro2:HyperlinkEx>
                                 </TextBlock>
 
@@ -274,15 +278,15 @@
                                          <Paragraph>
                                 <Run Foreground="White"
 									 FontSize="20"
-									 Text="환영합니다" />
+									 Text="Welcome" />
                             </Paragraph>
-                            <Paragraph Language="ko-KR">
-                                <Run Text="「제독업무도 바빠！」는 칸코레를 편하게 즐기기 위한 툴입니다." />
+                            <Paragraph Language="en-US">
+                                <Run Text="「KanColleViewer！」is a tool used to enjoy Kantai Collection easily." />
                                 <LineBreak />
-                                <Run Text="칸코레는 내장되어있는 Internet Explorer (IE)로 작동합니다. 칸코레서버에 어떠한 부담도 주지않도록 설계,개발하고, 통신내용의 변경 및 서버정보의 전송, Flash추출, 매크로,치트등의 기능은 일절 포함되어 있지 않습니다." />
+                                <Run Text="KCV works through Windows' built-in Internet Explorer browser. It does not include any type of unfair advantage, such as cheats, bots, or mactos. This tool is designed to prevent causing any unwanted load onto the Kancolle servers." />
                             </Paragraph>
-                            <Paragraph Language="ko-KR">
-                                <Run Text="게임이 제대로 표시되지 않거나 스크립트 오류가 반복되면 IE의 캐시를 삭제해보세요. 개선되지않으면 IE의 설정이나 'IE에서 Flash사용이 가능한가' 등의 것들을 확인하주시기 바랍니다." />
+                            <Paragraph Language="en-US">
+                                <Run Text="If the game does not display correctly, please check your IE settings, or clear your cache. Also make sure that Flash is installed for IE." />
                             </Paragraph>
                             <Paragraph>
                                 <InlineUIContainer>
@@ -311,7 +315,7 @@
                                 </InlineUIContainer>
                             </Paragraph>
                             <Paragraph Language="ko-KR">
-                                <Run Text="이 툴은 비정기적으로 업데이트 되고있습니다. 업데이트 확인은 요령껏 해주시길 바랍니다." />
+                                <Run Text="This tool is updated semi-frequently. Please check for updates." />
                                 <LineBreak />
                                 <LineBreak />
                                 <Run Text="Project home:" />
@@ -330,10 +334,14 @@
                                 <metro2:HyperlinkEx Uri="https://github.com/Grabacr07/KanColleViewer">
                                     <Run Text="https://github.com/Grabacr07/KanColleViewer" />
                                 </metro2:HyperlinkEx><LineBreak />
-                                 <Run Text="업데이트 링크:" />
+                                <Run Text="Update Link:" />
                                 <metro2:HyperlinkEx Uri="http://KCVkr.tistory.com/category/Releases">
                                     <Run Text="http://KCVkr.tistory.com/category/Releases" />
-                                </metro2:HyperlinkEx>
+                                </metro2:HyperlinkEx><LineBreak />
+                                <Run Text="English Fork:" />
+                                <metro2:HyperlinkEx Uri="https://github.com/gensuihime/KanColleViewer">
+                                    <Run Text="https://github.com/gensuihime/KanColleViewer" />
+                                </metro2:HyperlinkEx><LineBreak />
                                 
                             </Paragraph>
                                     </FlowDocument>
@@ -369,7 +377,7 @@
 
                     <TabItem>
                         <TabItem.Header>
-                            <TextBlock Text="알림설정"
+                            <TextBlock Text="Notifications"
 										   Style="{DynamicResource TabHeaderTextStyleKey}" />
                         </TabItem.Header>
                         <settings:Notification Margin="10,9" />
