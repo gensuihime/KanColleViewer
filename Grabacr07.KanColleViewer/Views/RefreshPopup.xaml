@@ -16,7 +16,7 @@
 				   mc:Ignorable="d"
 				   d:DataContext="{d:DesignInstance viewModels:RefreshPopupViewModel}"
 				   Style="{DynamicResource MetroDialogStyleKey}"
-				   Title="새로고침"
+				   Title="Refresh"
 				   WindowStartupLocation="CenterScreen"
 				   SizeToContent="Height">
 	<Grid>
@@ -25,7 +25,7 @@
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
 
-		<TextBlock Text="게임 화면을 새로고침하시겠습니까?"
+		<TextBlock Text="Will you refresh the page?"
 				   FontSize="13"
 				   Foreground="{DynamicResource ActiveForegroundBrushKey}"
 				   Margin="10,0"
@@ -36,12 +36,12 @@
 					HorizontalAlignment="Right"
 					Margin="14,7,14,14">
 
-			<metro2:CallMethodButton Content="네"
+			<metro2:CallMethodButton Content="Yes"
 									 MinWidth="100"
 									 Padding="20,5"
 									 MethodName="RefreshNav"
 									 Margin="12,0,0,0" />
-			<metro2:CallMethodButton Content="아니오"
+			<metro2:CallMethodButton Content="No"
 									 MinWidth="100"
 									 Padding="20,5"
 									 MethodName="PopupClose"
