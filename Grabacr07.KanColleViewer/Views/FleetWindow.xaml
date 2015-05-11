@@ -200,7 +200,7 @@
 									<Style TargetType="{x:Type TextBlock}"
 										   BasedOn="{StaticResource DefaultTextStyleKey}">
 										<Setter Property="Text"
-												Value="건재" />
+												Value="OK" />
 										<Setter Property="Background"
 												Value="{DynamicResource BackgroundBrushKey}" />
 										<Style.Triggers>
@@ -210,7 +210,7 @@
 															   Value="True" />
 												</MultiDataTrigger.Conditions>
 												<Setter Property="Text"
-														Value="건재・다메콘 탑재" />
+														Value="OK・Has Damage Control" />
 											</MultiDataTrigger>
 											<MultiDataTrigger>
 												<MultiDataTrigger.Conditions>
@@ -218,7 +218,7 @@
 															   Value="True" />
 												</MultiDataTrigger.Conditions>
 												<Setter Property="Text"
-														Value="대파 (격침 가능성 있음)" />
+														Value="Heavy Damage (May sink)" />
 												<Setter Property="Foreground"
 														Value="White" />
 												<Setter Property="Background"
@@ -230,7 +230,7 @@
 															   Value="True" />
 												</MultiDataTrigger.Conditions>
 												<Setter Property="Text"
-														Value="대파 (다메콘 사용가능)" />
+														Value="Heavy Damage (Damecon Loaded)" />
 												<Setter Property="Background"
 														Value="{DynamicResource FleetRepairingBrushKey}" />
 											</MultiDataTrigger>
@@ -240,7 +240,7 @@
 															   Value="True" />
 												</MultiDataTrigger.Conditions>
 												<Setter Property="Text"
-														Value="대파 (퇴피완료)" />
+														Value="Heavy Damage (Retreated)" />
 												<Setter Property="Background"
 														Value="{DynamicResource FleetRepairingBrushKey}" />
 											</MultiDataTrigger>
@@ -250,7 +250,7 @@
 															   Value="True" />
 												</MultiDataTrigger.Conditions>
 												<Setter Property="Text"
-														Value="퇴피 (호위퇴피)" />
+														Value="Retreated (Escorted Retreat)" />
 												<Setter Property="Background"
 														Value="{DynamicResource FleetRepairingBrushKey}" />
 											</MultiDataTrigger>
@@ -260,7 +260,7 @@
 															   Value="True" />
 												</MultiDataTrigger.Conditions>
 												<Setter Property="Text"
-														Value="입거중" />
+														Value="In Docks" />
 												<Setter Property="Background"
 														Value="{DynamicResource FleetRepairingBrushKey}" />
 											</MultiDataTrigger>
@@ -397,7 +397,7 @@
 										<Style TargetType="{x:Type TextBlock}"
 											   BasedOn="{StaticResource DefaultTextStyleKey}">
 											<Setter Property="Text"
-													Value="탄착관측사격" />
+													Value="Artillery Fire" />
 											<Setter Property="Foreground"
 													Value="{DynamicResource ActiveForegroundBrushKey}" />
 											<Setter Property="Background"
@@ -413,7 +413,7 @@
 										<Style TargetType="{x:Type TextBlock}"
 											   BasedOn="{StaticResource DefaultTextStyleKey}">
 											<Setter Property="Text"
-													Value="야전컷인: 30 %" />
+													Value="Night Battle Cut-In: 30 %" />
 											<Setter Property="Foreground"
 													Value="{DynamicResource ActiveForegroundBrushKey}" />
 											<Setter Property="Background"
@@ -585,7 +585,7 @@
 									   HorizontalAlignment="Right"
 									   VerticalAlignment="Bottom"
 									   Margin="1,2">
-									<Run Text="합계레벨" />
+									<Run Text="Total Level" />
 									<Run Text=":" />
 							</TextBlock>
 							<TextBlock Grid.Row="0"
@@ -601,7 +601,7 @@
 									   HorizontalAlignment="Right"
 									   VerticalAlignment="Bottom"
 									   Margin="1,2">
-									<Run Text="평균레벨" />
+									<Run Text="Average Level" />
 									<Run Text=":" />
 							</TextBlock>
 							<TextBlock Grid.Row="1"
@@ -617,7 +617,7 @@
 									   HorizontalAlignment="Right"
 									   VerticalAlignment="Bottom"
 									   Margin="1,2">
-									<Run Text="색적능력" />
+									<Run Text="Line of Sight" />
 									<Run Text=":" />
 							</TextBlock>
 							<TextBlock Grid.Row="3"
@@ -633,7 +633,7 @@
 									   HorizontalAlignment="Right"
 									   VerticalAlignment="Bottom"
 									   Margin="1,2">
-									<Run Text="제공전력" />
+									<Run Text="AA Power" />
 									<Run Text=":" />
 							</TextBlock>
 							<TextBlock Grid.Row="4"
@@ -660,7 +660,7 @@
 									   VerticalAlignment="Bottom"
 									   Margin="1,2"
 									   Visibility="Collapsed">
-									<Run Text="스테이터스" />
+									<Run Text="Status" />
 									<Run Text=":" />
 							</TextBlock>
 							<TextBlock Grid.Row="7"
@@ -699,7 +699,7 @@
 									<Style TargetType="{x:Type TextBlock}"
 										   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 										<Setter Property="Text"
-												Value="함대 대기중..." />
+												Value="Fleet Idling..." />
 										<Setter Property="FontFamily"
 												Value="{DynamicResource EmphaticFontFamilyKey}" />
 										<Setter Property="FontSize"
@@ -712,7 +712,7 @@
 											<DataTrigger Binding="{Binding Source.State.Situation, Converter={StaticResource HasFlagConverter}, ConverterParameter=Sortie}"
 														 Value="True">
 												<Setter Property="Text"
-														Value="함대 출격중입니다!" />
+														Value="Fleet Sortieing!" />
 												<Setter Property="Foreground"
 														Value="{DynamicResource ActiveForegroundBrushKey}" />
 												<Setter Property="Background"
@@ -729,12 +729,12 @@
 										<Style TargetType="{x:Type TextBlock}"
 											   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 											<Setter Property="Text"
-													Value="함대출격준비가 아직 완료되지않았습니다" />
+													Value="Fleet is not ready to sortie." />
 											<Style.Triggers>
 												<DataTrigger Binding="{Binding Source.State.IsReady}"
 															 Value="True">
 													<Setter Property="Text"
-															Value="출격준비완료!" />
+															Value="Ready to Sortie!" />
 													<Setter Property="Foreground"
 															Value="{DynamicResource ActiveForegroundBrushKey}" />
 													<Setter Property="Background"
@@ -743,7 +743,7 @@
 												<DataTrigger Binding="{Binding Source.State.Situation, Converter={StaticResource HasFlagConverter}, ConverterParameter=Sortie}"
 															 Value="True">
 													<Setter Property="Text"
-															Value="출격준비완료!" />
+															Value="Ready to Sortie!" />
 												</DataTrigger>
 											</Style.Triggers>
 										</Style>
@@ -758,7 +758,7 @@
 													<Style TargetType="{x:Type TextBlock}"
 														   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 														<Setter Property="Text"
-																Value="함대는 원정나가있지않습니다." />
+																Value="Fleet is not on expedition." />
 														<Style.Triggers>
 															<MultiDataTrigger>
 																<MultiDataTrigger.Conditions>
@@ -767,7 +767,7 @@
 																</MultiDataTrigger.Conditions>
 																<Setter Property="Text">
 																	<Setter.Value>
-																		<MultiBinding StringFormat="함대는 원정중입니다: {0} - {1}">
+																		<MultiBinding StringFormat="Fleet is on an expedition: {0} - {1}">
 																			<Binding Path="Expedition.Mission.Title" />
 																			<Binding Path="Expedition.Remaining" />
 																		</MultiBinding>
@@ -789,7 +789,7 @@
 													<Style TargetType="{x:Type TextBlock}"
 														   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 														<Setter Property="Text"
-																Value="연합함대는 원정에 참가할수 없습니다" />
+																Value="Combined fleets cannot go on expeditions." />
 													</Style>
 												</TextBlock.Style>
 											</TextBlock>
@@ -802,7 +802,7 @@
 										<Style TargetType="{x:Type TextBlock}"
 											   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 											<Setter Property="Text"
-													Value="칸무스 체력상태 양호" />
+													Value="Kanmusu health OK" />
 											<Style.Triggers>
 												<MultiDataTrigger>
 													<MultiDataTrigger.Conditions>
@@ -810,7 +810,7 @@
 																   Value="True" />
 													</MultiDataTrigger.Conditions>
 													<Setter Property="Text"
-															Value="함대에 대파당한 칸무스가 있습니다!" />
+															Value="Your fleet has a heaily damaged kanmusu!" />
 													<Setter Property="Foreground"
 															Value="{DynamicResource ActiveForegroundBrushKey}" />
 													<Setter Property="Background"
@@ -822,7 +822,7 @@
 																   Value="True" />
 													</MultiDataTrigger.Conditions>
 													<Setter Property="Text"
-															Value="함대에 대파당한 칸무스가 있습니다!" />
+															Value="Your fleet has a heaily damaged kanmusu!" />
 													<Setter Property="Foreground"
 															Value="{DynamicResource ActiveForegroundBrushKey}" />
 													<Setter Property="Background"
@@ -838,7 +838,7 @@
 										<Style TargetType="{x:Type TextBlock}"
 											   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 											<Setter Property="Text"
-													Value="함대에 입거해있는 칸무스가 없습니다" />
+													Value="None of your ships are in the docks" />
 											<Style.Triggers>
 												<MultiDataTrigger>
 													<MultiDataTrigger.Conditions>
@@ -846,7 +846,7 @@
 																   Value="True" />
 													</MultiDataTrigger.Conditions>
 													<Setter Property="Text"
-															Value="함대에 입거중인 칸무스가 있습니다" />
+															Value="Your fleet has a shipgirl in the docks" />
 													<Setter Property="Foreground"
 															Value="{DynamicResource ActiveForegroundBrushKey}" />
 													<Setter Property="Background"
@@ -862,7 +862,7 @@
 										<Style TargetType="{x:Type TextBlock}"
 											   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 											<Setter Property="Text"
-													Value="함대 보급 완료" />
+													Value="Fully supplied" />
 											<Style.Triggers>
 												<MultiDataTrigger>
 													<MultiDataTrigger.Conditions>
@@ -870,7 +870,7 @@
 																   Value="True" />
 													</MultiDataTrigger.Conditions>
 													<Setter Property="Text"
-															Value="함대에 보급받지 못한 칸무스가 있습니다" />
+															Value="One or more of your shipgirls are not fully supplied" />
 													<Setter Property="Foreground"
 															Value="{DynamicResource ActiveForegroundBrushKey}" />
 													<Setter Property="Background"
@@ -886,7 +886,7 @@
 										<Style TargetType="{x:Type TextBlock}"
 											   BasedOn="{StaticResource IndicatorTextBlockStyleKey}">
 											<Setter Property="Text"
-													Value="함대에 피로한 칸무스가 없습니다" />
+													Value="Morale OK" />
 											<Style.Triggers>
 												<MultiDataTrigger>
 													<MultiDataTrigger.Conditions>
@@ -897,7 +897,7 @@
 													</MultiDataTrigger.Conditions>
 													<Setter Property="Text">
 														<Setter.Value>
-															<MultiBinding StringFormat="피로회복까지: {0}">
+															<MultiBinding StringFormat="Until Morale Recovery: {0}">
 																<Binding Path="State.Homeport.Condition.Remaining" />
 															</MultiBinding>
 														</Setter.Value>
