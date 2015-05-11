@@ -50,7 +50,7 @@
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
 
-		<TextBlock Text="현재 대파중인 칸무스가 있습니다!"
+		<TextBlock Text="One or more or your ships are heavily damaged!"
 				   FontSize="13"
 				   Foreground="{DynamicResource ActiveForegroundBrushKey}"
 				   VerticalAlignment="Top"
@@ -61,7 +61,7 @@
 					HorizontalAlignment="Left"
 					Margin="14,7,14,14">
 
-			<metro2:CallMethodButton Content="닫기"
+			<metro2:CallMethodButton Content="Close"
 									 MinWidth="100"
 									 FontWeight="Bold"
 									 FontSize="15"
