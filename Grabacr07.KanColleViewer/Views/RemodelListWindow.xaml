@@ -141,8 +141,8 @@
 			</Grid>
 		</Border>
 		<StackPanel Margin="10,0" Grid.Row="1">
-			<TextBlock Foreground="#FFF50000" Text="※갱신시간은 0:00이지만 실제로는 약간 늦게 갱신됩니다."/>
-			<TextBlock Foreground="#FFF50000" Text="※특이사항이 있는 장비의 경우 툴팁으로 특이사항을 확인할 수 있습니다."/>
+			<TextBlock Foreground="#FFF50000" Text="※Data Fetch time is 0:00 but in real time it's a bit later."/>
+			<TextBlock Foreground="#FFF50000" Text="※For special equipment you can check specifics through the tooltips."/>
 			<TextBlock/>
 			<Grid>
 				<Grid.ColumnDefinitions>
@@ -156,37 +156,37 @@
 							<Style.Triggers>
 								<DataTrigger Binding="{Binding WeekDayView}"
 												 Value="1">
-									<Setter Property="Text" Value="일요일"/>
+									<Setter Property="Text" Value="Sunday"/>
 								</DataTrigger>
 								<DataTrigger Binding="{Binding WeekDayView}"
 												 Value="2">
-									<Setter Property="Text" Value="월요일"/>
+									<Setter Property="Text" Value="Monday"/>
 								</DataTrigger>
 								<DataTrigger Binding="{Binding WeekDayView}"
 												 Value="3">
-									<Setter Property="Text" Value="화요일"/>
+									<Setter Property="Text" Value="Tuesday"/>
 								</DataTrigger>
 								<DataTrigger Binding="{Binding WeekDayView}"
 												 Value="4">
-									<Setter Property="Text" Value="수요일"/>
+									<Setter Property="Text" Value="Wednesday"/>
 								</DataTrigger>
 								<DataTrigger Binding="{Binding WeekDayView}"
 												 Value="5">
-									<Setter Property="Text" Value="목요일"/>
+									<Setter Property="Text" Value="Thursday"/>
 								</DataTrigger>
 								<DataTrigger Binding="{Binding WeekDayView}"
 												 Value="6">
-									<Setter Property="Text" Value="금요일"/>
+									<Setter Property="Text" Value="Friday"/>
 								</DataTrigger>
 								<DataTrigger Binding="{Binding WeekDayView}"
 												 Value="7">
-									<Setter Property="Text" Value="토요일"/>
+									<Setter Property="Text" Value="Saturday"/>
 								</DataTrigger>
 							</Style.Triggers>
 						</Style>
 					</TextBlock.Style>
 				</TextBlock>
-				<TextBlock Text="의 개수공창목록" FontSize="20" Grid.Column="1"/>
+				<TextBlock Text="'s Modernization Factory List" FontSize="20" Grid.Column="1"/>
 				<metro:PromptComboBox Margin="8"
 											ItemsSource="{Binding WeekDayList}"
 										  Grid.Column="2"
@@ -207,10 +207,10 @@
 						<GroupBox Header="    ">
 							<Border Background="{DynamicResource BorderBrushKey}"
 								Padding="8,6">
-								<TextBlock Text="장비명+필요 칸무스" HorizontalAlignment="Center"/>
+								<TextBlock Text="Equipment Name+Required Ships" HorizontalAlignment="Center"/>
 							</Border>
 						</GroupBox>
-						<GroupBox Header="상단" MinHeight="80">
+						<GroupBox Header="Upper" MinHeight="80">
 							<DockPanel>
 								<ItemsControl  ItemsSource="{Binding FirstList}">
 									<ItemsControl.Template>
@@ -254,7 +254,7 @@
 								</ItemsControl>
 							</DockPanel>
 						</GroupBox>
-						<GroupBox Header="중단" MinHeight="80">
+						<GroupBox Header="Mid" MinHeight="80">
 							<DockPanel>
 								<ItemsControl  ItemsSource="{Binding SecondList}">
 									<ItemsControl.Template>
@@ -297,7 +297,7 @@
 								</ItemsControl>
 							</DockPanel>
 						</GroupBox>
-						<GroupBox Header="하단" MinHeight="80">
+						<GroupBox Header="Lower" MinHeight="80">
 							<DockPanel>
 								<ItemsControl  ItemsSource="{Binding ThirdList}">
 									<ItemsControl.Template>
@@ -343,7 +343,7 @@
 						<GroupBox>
 							<Border Background="{DynamicResource BorderBrushKey}"
 								Padding="8,6">
-								<TextBlock Text="업그레이드 가능장비(툴팁으로 필요한 칸무스 이름을 표시)" HorizontalAlignment="Center"/>
+								<TextBlock Text="Upgradeable Equipment(Check required ships through tooltips)" HorizontalAlignment="Center"/>
 							</Border>
 						</GroupBox>
 						<Border MinHeight="80" BorderBrush="{DynamicResource BorderBrushKey}" BorderThickness="1">
@@ -381,7 +381,7 @@
 																	</Viewbox>
 																	<Run Text="{Binding Upgrade}" BaselineAlignment="Center"/>
 																	<TextBlock.ToolTip>
-																		<TextBlock Text="{Binding ShipName, StringFormat='필요 칸무스: {0}', TargetNullValue='필요 칸무스: 없음'}"/>
+																		<TextBlock Text="{Binding ShipName, StringFormat='Required Ships: {0}', TargetNullValue='Required Ships: None'}"/>
 																	</TextBlock.ToolTip>
 																</TextBlock>
 															</DataTemplate>
@@ -399,7 +399,7 @@
 						<GroupBox>
 							<Border Background="{DynamicResource BorderBrushKey}"
 								Padding="8,6">
-								<TextBlock Text="장비소모수" HorizontalAlignment="Center"/>
+								<TextBlock Text="Required Equipment Count" HorizontalAlignment="Center"/>
 							</Border>
 						</GroupBox>
 						<Border BorderBrush="{DynamicResource BorderBrushKey}" BorderThickness="1">
@@ -455,7 +455,7 @@
 									<GridView>
 										<GridViewColumn>
 											<GridViewColumn.Header>
-												<TextBlock Text="장비명" />
+												<TextBlock Text="Equipment Name" />
 											</GridViewColumn.Header>
 											<GridViewColumn.CellTemplate>
 												<DataTemplate DataType="{x:Type CviewModels:SlotItemCounter}">
@@ -474,7 +474,7 @@
 										</GridViewColumn>
 										<GridViewColumn>
 											<GridViewColumn.Header>
-												<TextBlock Text="초기/★6/★10" />
+												<TextBlock Text="Beginning/★6/★10" />
 											</GridViewColumn.Header>
 											<GridViewColumn.CellTemplate>
 												<DataTemplate DataType="{x:Type CviewModels:SlotItemCounter}">
