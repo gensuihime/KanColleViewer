@@ -30,57 +30,57 @@
 			<TextBlock Foreground="red" 
 						   FontWeight="Bold"
 						   FontSize="13" Margin="0,0,0,20">
-				<Run Text="※해당 결과는 예측된 결과입니다! 실제결과와는 다소 차이가 있을 수 있습니다."/>
+				<Run Text="※The following results are a prediction! It may not be entirely correct."/>
 				<LineBreak/>
-				<Run Text="※C랭크와 D랭크의 경우 조건이 아직 완벽하게 밝혀지지 않았습니다."/>
+				<Run Text="※In the case of C and D rank, the correct triggers have not been discovered yet."/>
 			</TextBlock>
 			<Grid>
 				<Grid HorizontalAlignment="Center">
 					<TextBlock Grid.Column="1"
 								FontWeight="ExtraBold"
-								Text="완전승리 S"
+								Text="Complete Victory S"
 								Foreground="#FFFFE558"
 							   HorizontalAlignment="Center"
 								FontSize="20"
 								Visibility="{Binding PerfectRank, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" d:IsHidden="True"/>
 					<TextBlock Grid.Column="1"
 								FontWeight="ExtraBold"
-								Text="S승리"
+								Text="S Great Victory"
 								Foreground="Gold"
 							   HorizontalAlignment="Center"
 								FontSize="20"
 								Visibility="{Binding RankS, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" d:IsHidden="True"/>
 					<TextBlock Grid.Column="1"
 								FontWeight="ExtraBold"
-								Text="A승리"
+								Text="A Victory"
 								Foreground="#FFD10000"
 							   HorizontalAlignment="Center"
 								FontSize="20"
 								Visibility="{Binding RankA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" d:IsHidden="True"/>
 					<TextBlock Grid.Column="1"
 								FontWeight="ExtraBold"
-								Text="B승리"
+								Text="B Minor Victory"
 								Foreground="#FFD43353"
 							   HorizontalAlignment="Center"
 								FontSize="20"
 								Visibility="{Binding RankB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" d:IsHidden="True"/>
 					<TextBlock Grid.Column="1"
 								FontWeight="ExtraBold"
-								Text="C패배"
+								Text="C Minor Defeat"
 								Foreground="#FF42428F"
 							   HorizontalAlignment="Center"
 								FontSize="20"
 								Visibility="{Binding RankC, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" d:IsHidden="True"/>
 					<TextBlock Grid.Column="1"
 								FontWeight="ExtraBold"
-								Text="D패배"
+								Text="D Defeat"
 								Foreground="#FF02A43D"
 							   HorizontalAlignment="Center"
 								FontSize="20"
 								Visibility="{Binding RankD, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" d:IsHidden="True"/>
 					<TextBlock Grid.Column="1"
 								FontWeight="ExtraBold"
-								Text="알수없음 혹은 D랭크 미만"
+								Text="Unknown or below D"
 								Foreground="#FF443DCF"
 							   HorizontalAlignment="Center"
 								FontSize="20"
@@ -90,7 +90,7 @@
 					<TextBlock VerticalAlignment="Center" 
 							   FontSize="13" 
 							   Foreground="{DynamicResource ForegroundBrushKey}" 
-							   Text="나침반결과 "/>
+							   Text="Compass Result "/>
 					<TextBlock HorizontalAlignment="Right"
 							   VerticalAlignment="Center"
 							   Margin="0,0,15,0"
@@ -104,27 +104,27 @@
 									<DataTrigger Binding="{Binding CellStatus}"
 												 Value="2">
 										<Setter Property="Background" Value="#FF3FBD2B"/>
-										<Setter Property="Text" Value="자원획득"/>
+										<Setter Property="Text" Value="Resource Node"/>
 									</DataTrigger>
 									<DataTrigger Binding="{Binding CellStatus}"
 												 Value="3">
 										<Setter Property="Background" Value="#FFA33CEA"/>
-										<Setter Property="Text" Value="소용돌이"/>
+										<Setter Property="Text" Value="Maelstrom"/>
 									</DataTrigger>
 									<DataTrigger Binding="{Binding CellStatus}"
 												 Value="4">
 										<Setter Property="Background" Value="#FFF01717"/>
-										<Setter Property="Text" Value="적 조우"/>
+										<Setter Property="Text" Value="Meet Enemy Fleet"/>
 									</DataTrigger>
 									<DataTrigger Binding="{Binding CellStatus}"
 												 Value="5">
 										<Setter Property="Background" Value="#FFD40C0C"/>
-										<Setter Property="Text" Value="보스전!"/>
+										<Setter Property="Text" Value="Boss Fight!"/>
 									</DataTrigger>
 									<DataTrigger Binding="{Binding CellStatus}"
 												 Value="6">
 										<Setter Property="Background" Value="#FF0A8AB9"/>
-										<Setter Property="Text" Value="기분탓"/>
+										<Setter Property="Text" Value="Empty Node"/>
 									</DataTrigger>
 								</Style.Triggers>
 							</Style>
@@ -216,7 +216,7 @@
 										Value="1">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="소파"/>
+											Value="Minor Damage"/>
 										<Setter TargetName="StatusText"
 											Property="Foreground"
 											Value="#FF5B522A"/>
@@ -228,7 +228,7 @@
 										Value="2">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="중파" />
+											Value="Moderate Damage" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FFE88B06" />
@@ -237,7 +237,7 @@
 										Value="3">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="대파" />
+											Value="Heavy Damage" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FFD60000" />
@@ -246,7 +246,7 @@
 										Value="4">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="격침" />
+											Value="Sunk" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FF4C44FF" />
@@ -255,7 +255,7 @@
 										Value="5">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="회항"/>
+											Value="Retreat"/>
 										<Setter TargetName="StatusText"
 											Property="Foreground"
 											Value="White"/>
@@ -343,7 +343,7 @@
 										Value="1">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="소파"/>
+											Value="Minor Damage"/>
 										<Setter TargetName="StatusText"
 											Property="Foreground"
 											Value="#FF5B522A"/>
@@ -355,7 +355,7 @@
 										Value="2">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="중파" />
+											Value="Moderate Damage" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FFE88B06" />
@@ -364,7 +364,7 @@
 										Value="3">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="대파" />
+											Value="Heavy Damage" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FFD60000" />
@@ -373,7 +373,7 @@
 										Value="4">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="격침" />
+											Value="Sunk" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FF4C44FF" />
@@ -382,7 +382,7 @@
 										Value="5">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="회항"/>
+											Value="Retreat"/>
 										<Setter TargetName="StatusText"
 											Property="Foreground"
 											Value="White"/>
@@ -467,7 +467,7 @@
 										Value="1">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="소파" />
+											Value="Minor Damage" />
 										<Setter TargetName="StatusText"
 											Property="Foreground"
 											Value="#FF5B522A"/>
@@ -479,7 +479,7 @@
 										Value="2">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="중파" />
+											Value="Moderate Damage" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FFE88B06" />
@@ -488,7 +488,7 @@
 										Value="3">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="대파" />
+											Value="Heavy Damage" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FFD60000" />
@@ -497,7 +497,7 @@
 										Value="4">
 										<Setter TargetName="StatusText"
 											Property="Text"
-											Value="격침" />
+											Value="Sunk" />
 										<Setter TargetName="StatusGrid"
 											Property="Background"
 											Value="#FF4C44FF" />
