@@ -6,8 +6,8 @@ using System.ComponentModel.Composition;
 namespace Grabacr07.KanColleViewer.Plugins
 {
 	[Export(typeof(IToolPlugin))]
-	[ExportMetadata("Title", "전투예보")]
-	[ExportMetadata("Description", "계산이 끝난 전투결과를 표시해주는 플러그인입니다.")]
+	[ExportMetadata("Title", "Battle Prediction")]
+	[ExportMetadata("Description", "Displays pre-calculated results from a battle.")]
 	[ExportMetadata("Version", "1.0")]
 	[ExportMetadata("Author", "@FreyYa")]
 
@@ -16,7 +16,7 @@ namespace Grabacr07.KanColleViewer.Plugins
 		private readonly BattlePreviewsViewModel battlePreviewsViewModel = new BattlePreviewsViewModel();
 		public string ToolName
 		{
-			get { return "전투예보"; }
+			get { return "Battle Prediction"; }
 		}
 
 		public object GetSettingsView()
